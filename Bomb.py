@@ -17,12 +17,7 @@ print(banner)
 message = input("message : ")
 repeats = input("repeats : ")
 
-def fast():
-    for i in range(int(repeats)):
-        pyautogui.typewrite(message)
-        pyautogui.press('enter')
-
-
 for i in range(int(repeats)):
-    thread = threading.Thread(target=fast)
-    thread.start()
+    pyautogui.typewrite(message)
+    pyautogui.press('enter')
+
